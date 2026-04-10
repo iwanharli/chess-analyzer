@@ -1,43 +1,97 @@
-# chess-ai-simulator
+# ♟️ Antigravity Chess AI (Chess Analyzer)
 
-This template should help get you started developing with Vue 3 in Vite.
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.5+-4fc08d?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0+-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Stockfish](https://img.shields.io/badge/Stockfish-18_WASM-white?style=for-the-badge&logo=chess.com&logoColor=black)](https://stockfishchess.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0+-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-## Recommended IDE Setup
+**Antigravity Chess AI** is a state-of-the-art web-based chess analysis and simulation platform. Built with a focus on high performance and premium aesthetics, it combines the power of **Stockfish 18 WASM** with a modern Vue 3 interface to provide grandmaster-level insights in your browser.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![Chess AI Simulator Preview](https://raw.githubusercontent.com/iwanharli/chess-analyzer/main/preview.png) *(Note: Placeholder for actual preview image)*
 
-## Recommended Browser Setup
+## 🌟 Key Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### 🧠 Advanced Engine Analysis
+- **Stockfish 18 Integration**: Leverages the latest Stockfish engine running directly in your browser via WebAssembly (WASM).
+- **Multi-PV Support**: Analyze up to 5 best move variations simultaneously with depth, evaluation, and predicted variations.
+- **Visual Move Suggestions**: Best moves are highlighted directly on the board with interactive arrows and highlights.
+- **Dynamic Evaluation Bar**: Real-time visual representation of the position's balance.
 
-## Type Support for `.vue` Imports in TS
+### 🎮 Flexible Simulation Modes
+- **Practice Mode**: Play manually and get instant feedback on your moves.
+- **AI Opponent**: Challenge the computer as either White or Black.
+- **AI vs AI**: Watch the engine play against itself to study opening theories and endgame techniques.
+- **Undo/Flip functionality**: Seamlessly experiment with different lines and perspectives.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### 📊 Tactical HUD & Metadata
+- **Real-time Material Score**: Automatic calculation of piece values to track who is leading.
+- **Move History**: Complete history using Standard Algebraic Notation (SAN).
+- **PGN Export/Import**: Easily save your games or import existing PGNs for deep analysis.
+- **Professional Sound Effects**: High-quality audio feedback for moves, captures, checks, and game results.
 
-## Customize configuration
+### 🎨 Premium Design System
+- **Glassmorphism UI**: A sleek, translucent interface designed for focus and modern aesthetic appeal.
+- **Responsive Layout**: Three-column dashboard optimized for large displays and productivity.
+- **Confetti Rewards**: Celebratory animations for checkmates and victories.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🛠️ Tech Stack
 
-## Project Setup
+- **Framework**: [Vue 3](https://vuejs.org/) (Composition API + Script Setup)
+- **State Management**: [Pinia](https://pinia.vuejs.org/)
+- **Engine**: [Stockfish 18 WASM](https://github.com/official-stockfish/Stockfish)
+- **Chess Logic**: [Chess.js](https://github.com/jhlywa/chess.js)
+- **Board UI**: [Chessboard.js](https://chessboardjs.com/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS with Modern Flexbox/Grid
 
-```sh
-npm install
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v20.19.0 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/iwanharli/chess-analyzer.git
+   cd chess-analyzer
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run in development mode**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── components/      # UI Components (ChessBoard, EngineStatus, etc.)
+│   ├── stores/          # Pinia stores for game state and engine logic
+│   ├── services/        # Stockfish worker and Sound service
+│   ├── assets/          # Static assets and sounds
+│   └── App.vue          # Main application layout
+├── public/
+│   ├── engines/         # Stockfish WASM worker files
+│   └── css/             # Third-party CSS (chessboard.js)
+└── index.html           # Entry point
 ```
 
-### Compile and Hot-Reload for Development
+## 🤝 Contributing
 
-```sh
-npm run dev
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
-# chess-analyzer
+Built with ❤️ by [iwanharli](https://github.com/iwanharli)
